@@ -1,11 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import AuthForm from '../../components/AuthForm';
 
 const SignIn = () => (
-  <>
-    <p>SignIn</p>
-    <Link to="/signup">SignUp</Link>
-  </>
+  <AuthForm
+    header="Sign in to enter the home page"
+    actionText="Sign in"
+    redirectText="Sign Up"
+    redirectRoute="/signup"
+    onChange={() => {}}
+    onSubmit={() => {}}
+  />
 );
 
 export default SignIn;
