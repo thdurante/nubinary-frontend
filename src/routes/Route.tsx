@@ -9,15 +9,13 @@ interface RouteProps extends ReactDOMRouteProps {
 }
 
 const Route = ({ isPrivate = false, component: Component, ...rest }: RouteProps) => {
-  // TODO: fetch signed in user from store
-  const signedInUser = false;
-  const context = useContext(Context);
+  const { authStore } = useContext(Context);
 
   return (
     <ReactDOMRoute
       {...rest}
       render={({ location }) => {
-        return isPrivate === signedInUser ? (
+        return isPrivate === !!authStore?.currentUser ? (
           <Component />
         ) : (
           <Redirect
