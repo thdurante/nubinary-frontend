@@ -32,6 +32,10 @@ class AuthStore {
       if (routerStore) routerStore.history.push('/home');
     }
   };
+
+  public handleSignUp = async (values: AuthFormType): Promise<void> => {
+    // TODO: implement.
+  };
 }
 
 export default AuthStore;
