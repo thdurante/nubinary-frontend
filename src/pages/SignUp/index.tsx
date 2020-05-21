@@ -8,7 +8,6 @@ const SignUp = () => (
     actionText="Sign up"
     redirectText="Sign In"
     redirectRoute="/"
-    onChange={() => {}}
     onSubmit={() => {}}
   />
 );
